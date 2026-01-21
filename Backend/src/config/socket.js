@@ -20,7 +20,7 @@ export default function setupSocket (server) {
 
         // Register feature specific socket logic
         registerRoomSocket(io, socket);
-        registerTextSocket(io, socket);
+        // registerTextSocket(io, socket);
 
         socket.on("disconnect", () => {
             console.log("User disconnected: ", socket.id);
