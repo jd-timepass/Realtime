@@ -1,91 +1,99 @@
-# 🚀 MERN Full Stack Template
 
-![Node.js](https://img.shields.io/badge/Node.js-v14%2B-green) ![React](https://img.shields.io/badge/React-v18-blue) ![Express](https://img.shields.io/badge/Express-v4-lightgrey) ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-forestgreen) ![License](https://img.shields.io/badge/License-MIT-yellow)
+# ⚡ Real-Time Backend & Frontend Mastery Project
 
-> A production-ready starter template for building full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js). Designed for speed, scalability, and modularity.
+![Node.js](https://img.shields.io/badge/Node.js-v14%2B-green) ![React](https://img.shields.io/badge/React-v18-blue) ![Socket.IO](https://img.shields.io/badge/Socket.IO-realtime-black) ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+> A hands-on, phase-wise project to master all practical real-time backend and frontend concepts for hackathons and scalable apps. Focused on reusable architecture, event design, state sync, and multi-user collaboration.
 
 ---
 
-## 📁 Project Structure
+## 🧭 Project Overview
+
+This project is designed to help you:
+- Build a strong, reusable real-time backend & frontend foundation
+- Master event-driven architecture, room systems, and state sync
+- Learn by implementing collaborative features (text, code, whiteboard, etc.)
+- Prepare for hackathons and scalable real-world apps
+
+---
+
+## 📚 Learning Phases & Goals
+
+### **Phase A: Hackathon Core**
+- Real-time shared text sync (collaborative editor)
+- Server as source of truth
+- Event design: text-change, typing, join/leave
+- Room isolation & membership
+- Multi-user testing & debug tools
+
+### **Phase B: Advanced Practical**
+- Reconnection & sync recovery
+- Server-side room memory & cleanup
+- Conflict handling (last-write-wins, overwrite logic)
+
+### **Phase C: Post-Hackathon Growth**
+- Redis adapter for scaling
+- Presence system, advanced features (whiteboard, code, media)
+
+---
+
+## 🏗️ Project Structure
 
 ```
-MERN_full_stack/
+Realtime/
 ├── README.md
 ├── Backend/
-│   ├── app.js
-│   ├── index.js
 │   ├── package.json
 │   └── src/
+│       ├── app.js
+│       ├── index.js
+│       ├── config/
 │       ├── controllers/
-│       │   └── auth.controller.js
 │       ├── middlewares/
-│       │   └── addHere.js
 │       ├── models/
-│       │   └── user.model.js
 │       ├── routes/
-│       │   ├── auth.route.js
-│       │   └── user.route.js
 │       ├── services/
-│       │   └── auth.service.js
+│       ├── sockets/
 │       └── utils/
-│           └── addhere.js
 ├── Frontend/
-│   ├── eslint.config.js
-│   ├── index.html
 │   ├── package.json
 │   ├── vite.config.js
-│   └── public/
-│       └── src/
-│           ├── App.jsx
-│           ├── index.css
-│           ├── main.jsx
-│           ├── assets/
-│           ├── components/
-│           │   └── addHere.js
-│           │   └── common/
-│           │       ├── Button.jsx
-│           │       └── Modal.jsx
-│           ├── context/
-│           │   └── authContext.jsx
-│           ├── hooks/
-│           │   ├── useAuth.js
-│           │   └── useDebounce.js
-│           ├── layouts/
-│           ├── pages/
-│           │   ├── Home.jsx
-│           │   └── Login.jsx
-│           ├── services/
-│           │   ├── api.js
-│           │   ├── auth.service.js
-│           │   └── user.service.js
-│           ├── styles/
-│           │   └── global.css
-│           └── utils/
-│               ├── constants.js
-│               └── helpers.js
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── utils/
 ```
 
 ---
 
-## ⚡ Features
-- **🔐 Full-Stack Authentication Ready:** Structure prepared for JWT/Session authentication.
-- **🏗️ MVC Architecture:** Backend organized into Models, Views (Routes), and Controllers for better separation of concerns.
-- **🌐 RESTful API:** Standardized API endpoints structure for easy integration.
-- **⚛️ React Hooks:** Utilizes modern functional components and hooks for state management.
-- **🌍 Environment Management:** Centralized configuration via `.env` for easy environment setup.
-- **🔗 CORS Configured:** Seamless communication between frontend and backend.
+## 🚀 Key Features
 
-## 🚀 Getting Started
+- Modular Socket.IO backend (room, text, code, whiteboard, video, etc.)
+- Real-time event-driven architecture
+- Room-based isolation and scaling
+- Server-authoritative state sync
+- Optimistic UI and echo loop prevention
+- Multi-user debug/testing tools
+- Clean, reusable frontend components
 
-### 📋 Prerequisites
-- Node.js (v14 or higher)
-- MongoDB Atlas account (for database)
+---
 
-### 📦 Installation
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js (v14+)
+- (Optional) MongoDB/Redis for advanced features
+
+### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/MERN_full_stack.git
-   cd MERN_full_stack
+   git clone <your-repo-url>
+   cd Realtime
    ```
 2. Install backend dependencies:
    ```bash
@@ -98,25 +106,30 @@ MERN_full_stack/
    npm install
    ```
 
-### 🏃‍♂️ Running the Application
+### Running the Application
 1. Start the backend server:
    ```bash
    cd Backend
    npm start
    ```
-2. Start the frontend development server:
+2. Start the frontend dev server:
    ```bash
    cd Frontend
    npm run dev
    ```
 
-### 🤝 Contributing
-Contributions are welcome! Let me know if there is scope of improvement or if any issue then raise issue.
+---
 
-### 📜 License
-This project is licensed under the MIT License. free to use by anyone and speed up your development journey!
+## 🧩 Contributing & Learning
+
+This project is structured for step-by-step learning. Each phase builds on the previous, with clear goals and code examples. Contributions, questions, and improvements are welcome!
 
 ---
 
 ## 📞 Contact
-For any inquiries, please reach out to [code369decode@gmail.com](mailto:code369decode@gmail.com).
+
+For questions or collaboration, reach out to [code369decode@gmail.com](mailto:code369decode@gmail.com).
+
+---
+
+   <strong> <i>Made with ❤️ By Jagdish Padhi </i></strong>
